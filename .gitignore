@@ -35,6 +35,7 @@ nb-configuration.xml
 npm-debug.log
 !node_modules/dolphin-core/
 node_modules/
+logs/
 
 # --------------------
 # SASS Files
