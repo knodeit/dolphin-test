@@ -27,7 +27,7 @@ if (cluster.isMaster && process.env.NODE_MODE !== undefined) {
         workerId = cluster.worker.id;
     }
 
-    dolphin.run().then(function () {
+    dolphin.().then(function () {
         console.log('Dolphin started as mode (' + process.env.NODE_ENV + ') cluster.worker.id:', workerId);
     });
 }

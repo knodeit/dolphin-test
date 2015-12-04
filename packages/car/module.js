@@ -4,7 +4,6 @@
 'use strict';
 var Module = require('dolphin-core').Module;
 var Logger = require('dolphin-core').Logger;
-var Logger1 = require('dolphin-core').Logger;
 
 var car = new Module('Car');
 car.register(function () {
@@ -17,6 +16,5 @@ car.register(function () {
     Logger.warn('warn');
     Logger.debug('debug');
     Logger.error('error', {d:1});
-    Logger1.error('error', {d:1});
     return car;
 });
