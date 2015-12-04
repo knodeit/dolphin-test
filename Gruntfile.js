@@ -20,13 +20,19 @@ module.exports = function (grunt) {
                     jshintrc: true
                 }
             }
+        },
+        execute: {
+            target: {
+                src: ['dolphin.js']
+            }
         }
     });
 
     //Load NPM tasks
     require('load-grunt-tasks')(grunt);
+    grunt.loadNpmTasks('grunt-execute');
 
     //Default task(s).
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('default', ['jshint', 'execute']);
     //grunt.registerTask('test', ['env:test', 'mochaTest:all']);
 };
